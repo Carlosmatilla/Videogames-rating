@@ -1,10 +1,10 @@
 import React from 'react';
-import Rating from '@material-ui/lab/Rating'
-import StarIcon from '@material-ui/icons/Star';
+import { Rate } from 'antd';
+import { StarFilled } from '@ant-design/icons';
 import './Game.sass'
 
 
-function Post({ game, handleRating, i }) {
+function Game({ game, handleRating, i }) {
 
     return <>
 
@@ -15,20 +15,21 @@ function Post({ game, handleRating, i }) {
         <div className="game__info">
 
             <div className="game__title">
-                <h3>{i + 1 + '. '}{game.name}</h3>
+                <h3><span>{i + 1 + '.  '}</span>{game.name}</h3>
             </div>
 
             <div className="game__stars">
-                <Rating value={game.average / 2} size={"medium"} precision={0.5} max={5} onChange={(_, number) => handleRating(game, number)} />
+                <Rate value={Math.round(game.average * 2)/2} allowClear={false} allowHalf onChange={(value) => handleRating(game, value)} />
+                <p>( {game.reviews.length} )</p>
             </div>
 
         </div>
 
         <div className="game__average">
             {game.average + '  '}
-            <StarIcon fontSize="large" className="star-icon" />
+            <StarFilled color="#FADB13" />
         </div>
     </>
 }
 
-export default Post
+export default Game

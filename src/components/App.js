@@ -1,36 +1,59 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import Game from './Game'
 import Header from './Header'
 import './App.sass'
-import { games } from '../data'
+import { rateGames, getGames } from '../redux/actions/index'
+import { connect } from 'react-redux'
 
 
-function App() {
+function App({ games, rateGames, getGames }) {
+
+  useEffect(() => {
+    (async () => await getGames())()
+  }, [getGames])
+
+  function handleRating(game, average) {
+    rateGames(game, average)
+  }
 
   return <>
 
+
     <div className="app">
 
-        <Header />
+      <Header />
 
-        <div className="games">
+      <div className="games">
 
-            {games.sort((a, b) => b.average - a.average)
-            .map((game, i) =>
+        {games.sort((a, b) => b.average - a.average)
+          .map((game, i) =>
 
-                <div key={game.name} className="games__item">
+            <div key={game.id} className="games__item">
 
-                  <Game i={i} game={game} />
+              <Game i={i} game={game} handleRating={handleRating} />
 
-                </div>
+            </div>
 
-            )}
+          )}
 
-        </div>
+      </div>
 
     </div>
 
   </>
 }
 
-export default App
+const mapStateToProps = state => {
+  return {
+    games: state.games,
+    isLoading: state.isLoading,
+    error: state.errorMessage
+  }
+}
+
+const mapDispatchToProps = {
+  rateGames,
+  getGames
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(App)
