@@ -4,9 +4,18 @@ import Header from './Header'
 import './App.sass'
 import { rateGames, getGames } from '../redux/actions/index'
 import { connect } from 'react-redux'
+import { motion, AnimatePresence } from "framer-motion"
+
 
 
 function App({ games, rateGames, getGames }) {
+
+  const animation = {
+    type: "tween",
+    damping: 20,
+    stiffness: 300,
+    duration: 0.5
+  };
 
   useEffect(() => {
     (async () => await getGames())()
@@ -24,18 +33,18 @@ function App({ games, rateGames, getGames }) {
       <Header />
 
       <div className="games">
+        <AnimatePresence>
+          {games.sort((a, b) => b.average - a.average)
+            .map((game, i) =>
 
-        {games.sort((a, b) => b.average - a.average)
-          .map((game, i) =>
+              <motion.div key={game.id} layoutTransition={animation} className="games__item">
 
-            <div key={game.id} className="games__item">
+                <Game i={i} game={game} handleRating={handleRating} />
 
-              <Game i={i} game={game} handleRating={handleRating} />
+              </motion.div>
 
-            </div>
-
-          )}
-
+            )}
+        </AnimatePresence>
       </div>
 
     </div>

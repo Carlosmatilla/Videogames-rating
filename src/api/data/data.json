@@ -32,15 +32,19 @@
       "id": 5,
       "url": "https://static.metacritic.com/images/products/games/2/72764928de50fee04f05ac490153dc0e-98.jpg",
       "name": "Resident Evil 3",
-      "average": 0,
-      "reviews": []
+      "average": "5.0",
+      "reviews": [
+        5
+      ]
     },
     {
       "id": 6,
       "url": "https://static.metacritic.com/images/products/games/8/f5b1cbf43a118c429f67022f9e93b41d-98.jpg",
       "name": "Red Dead Redemption 2",
-      "average": 0,
-      "reviews": [0]
+      "average": "4.5",
+      "reviews": [
+        4.5
+      ]
     },
     {
       "id": 7,
