@@ -20,7 +20,7 @@ function Game({ game, handleRating, i }) {
             </div>
 
             <div className="game__stars">
-                <Rate value={round(game.average * 2)/2} allowClear={false} allowHalf onChange={(value) => handleRating(game, value)} />
+                <Rate className="rate" style={{width: `80%`}} value={round(game.average * 2)/2} allowClear={false} allowHalf onChange={(value) => handleRating(game, value)} />
                 <p>( {game.reviews.length} )</p>
             </div>
 
