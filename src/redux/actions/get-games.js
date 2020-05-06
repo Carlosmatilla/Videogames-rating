@@ -5,7 +5,7 @@ import { LOADING, GET_GAMES, ERROR, CLEAN_ERROR } from './actions-types'
 export const getGames = () => async dispatch => {
     
     try {
-
+        
         dispatch({ type: LOADING, payload: true })
         const games = await getCall()
         dispatch({ type: LOADING, payload: false })

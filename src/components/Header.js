@@ -1,18 +1,23 @@
 import React from 'react'
-import './Header.sass'
-import { Button } from 'antd';
+import { Button } from 'antd'
 import { PlayCircleOutlined, PauseCircleOutlined, UndoOutlined } from '@ant-design/icons';
+import { Alert } from 'antd'
+import './Header.sass'
 
 
-const Header = ({ handleRandom, handleReset, random }) => {
+const Header = ({ handleRandom, handleReset, random, error }) => {
 
     return <>
 
+        {error && <Alert message={error} type="error" />}
+
         <header className="header">
+
             <div className="header__logo">
                 <img src="https://hexad.de/wp-content/themes/hexad/img/hexad-small-logo.png" alt="logo" />
                 <h2>Top VideoGames</h2>
             </div>
+
             <div className="header__buttons">
 
                 <Button type="primary" shape="round" icon={random ?
@@ -22,10 +27,10 @@ const Header = ({ handleRandom, handleReset, random }) => {
                     {random ? 'STOP RANDOM' : 'RANDOM RATING'}
                 </Button>
 
-                <Button type="primary" shape="circle" icon={<UndoOutlined />} size={'large'} onClick={() => handleReset()
-                    } />
-            </div>
+                <Button type="primary" shape="circle" icon={<UndoOutlined />} size={'large'} 
+                onClick={() => handleReset()} />
 
+            </div>
 
         </header>
 

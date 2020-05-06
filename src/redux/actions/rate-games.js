@@ -5,6 +5,7 @@ import { RATE_GAMES, ERROR, CLEAN_ERROR } from './actions-types'
 export const rateGames = (game, average) => async dispatch => {
 
     try {
+        
         const gameRated = await rateCall(game, average)
         return dispatch({ type: RATE_GAMES, payload: gameRated })
 
