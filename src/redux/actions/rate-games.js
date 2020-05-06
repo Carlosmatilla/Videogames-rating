@@ -1,35 +1,18 @@
+import rateCall from '../../logic/rate-call'
+import { RATE_GAMES, ERROR, CLEAN_ERROR } from './actions-types'
 
-import api from "../../api/api"
 
 export const rateGames = (game, average) => async dispatch => {
 
     try {
-        
-        const newGame = { ...game }
-
-        newGame.reviews.push(average)
-
-        newGame.average = ((newGame.reviews.reduce((a, b) => a += b)) / newGame.reviews.length).toFixed(1)
-
-        const response = await api.update(newGame, newGame.id)
-
-        const { status } = response
-
-        if (status === 200) {
-
-            return dispatch({ type: 'RATEGAMES', payload: response.data })
-
-        } else {
-
-            throw new Error("Unable to rate game")
-
-        }
+        const gameRated = await rateCall(game, average)
+        return dispatch({ type: RATE_GAMES, payload: gameRated })
 
     } catch (error) {
 
-        dispatch({ type: 'ERROR', payload: error })
+        dispatch({ type: ERROR, payload: error })
         setTimeout(() => {
-            return dispatch({ type: 'CLEANERROR' })
+            return dispatch({ type: CLEAN_ERROR })
         }, 8000);
         
     }

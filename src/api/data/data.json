@@ -4,15 +4,61 @@
       "id": 1,
       "url": "https://static.metacritic.com/images/products/games/2/fc2b1036e9ce9e224d11e32d5571a5bc-98.jpg",
       "name": "Persona 5 Royal",
-      "average": "2.5",
-      "reviews": [
-        2.5
-      ]
+      "average": 0,
+      "reviews": []
     },
     {
       "id": 2,
       "url": "https://static.metacritic.com/images/products/games/5/40531eb3a9013197e4bf63dbfb866719-98.jpg",
       "name": "Final Fantasy VII Remake",
+      "average": "5.0",
+      "reviews": [
+        5
+      ]
+    },
+    {
+      "id": 3,
+      "url": "https://static.metacritic.com/images/products/games/6/1aabc829ea9aa79bd1a90fffa77eb0bf-98.jpg",
+      "name": "DOOM Eternal",
+      "average": "3.0",
+      "reviews": [
+        3
+      ]
+    },
+    {
+      "id": 4,
+      "url": "https://static.metacritic.com/images/products/games/2/29462c61409dc4166ac8f33074ae322c-98.jpg",
+      "name": "Nioh 2",
+      "average": "2.8",
+      "reviews": [
+        4.5,
+        0.5,
+        2,
+        4
+      ]
+    },
+    {
+      "id": 5,
+      "url": "https://static.metacritic.com/images/products/games/2/72764928de50fee04f05ac490153dc0e-98.jpg",
+      "name": "Resident Evil 3",
+      "average": "3.0",
+      "reviews": [
+        3
+      ]
+    },
+    {
+      "id": 6,
+      "url": "https://static.metacritic.com/images/products/games/8/f5b1cbf43a118c429f67022f9e93b41d-98.jpg",
+      "name": "Red Dead Redemption 2",
+      "average": "4.0",
+      "reviews": [
+        4
+      ]
+    },
+    {
+      "id": 7,
+      "url": "https://static.metacritic.com/images/products/games/7/a149682ad949afdce7d25ee90d0ef848-98.jpg",
+      "name": "Grand Theft Auto V",
       "average": "3.5",
       "reviews": [
         5,
@@ -20,63 +66,22 @@
       ]
     },
     {
-      "id": 3,
-      "url": "https://static.metacritic.com/images/products/games/6/1aabc829ea9aa79bd1a90fffa77eb0bf-98.jpg",
-      "name": "DOOM Eternal",
-      "average": "4.1",
-      "reviews": [
-        4.5,
-        4.5,
-        3,
-        4.5
-      ]
-    },
-    {
-      "id": 4,
-      "url": "https://static.metacritic.com/images/products/games/2/29462c61409dc4166ac8f33074ae322c-98.jpg",
-      "name": "Nioh 2",
-      "average": "5.0",
-      "reviews": [
-        5,
-        5
-      ]
-    },
-    {
-      "id": 5,
-      "url": "https://static.metacritic.com/images/products/games/2/72764928de50fee04f05ac490153dc0e-98.jpg",
-      "name": "Resident Evil 3",
-      "average": "4.5",
-      "reviews": [
-        4.5
-      ]
-    },
-    {
-      "id": 6,
-      "url": "https://static.metacritic.com/images/products/games/8/f5b1cbf43a118c429f67022f9e93b41d-98.jpg",
-      "name": "Red Dead Redemption 2",
-      "average": 0,
-      "reviews": []
-    },
-    {
-      "id": 7,
-      "url": "https://static.metacritic.com/images/products/games/7/a149682ad949afdce7d25ee90d0ef848-98.jpg",
-      "name": "Grand Theft Auto V",
-      "average": 0,
-      "reviews": []
-    },
-    {
       "id": 8,
       "url": "https://static.metacritic.com/images/products/games/6/dcb5d2f7d2f23d0d4aa8fd809af6b12e-98.jpg",
       "name": "The Last Of Us Remastered",
-      "average": 0,
-      "reviews": []
+      "average": "5.0",
+      "reviews": [
+        5
+      ]
     },
     {
       "id": 9,
       "url": "https://static.metacritic.com/images/products/games/1/e88153ef354ef87717d8fa4bfc52e427-98.jpg",
       "name": "Battlefield 1",
-      "average": 0,
-      "reviews": []
+      "average": "2.0",
+      "reviews": [
+        2
+      ]
     },
     {
       "id": 10,
@@ -96,8 +101,10 @@
       "id": 12,
       "url": "https://static.metacritic.com/images/products/games/5/d31120073f909d2c034c09f91e7a5073-98.jpg",
       "name": "Bloodborne",
-      "average": 0,
-      "reviews": []
+      "average": "3.0",
+      "reviews": [
+        3
+      ]
     },
     {
       "id": 13,
@@ -110,8 +117,10 @@
       "id": 14,
       "url": "https://static.metacritic.com/images/products/games/5/1092744fa790bc2fa0cd1a0cd59d201b-98.jpg",
       "name": "Diablo III",
-      "average": 0,
-      "reviews": []
+      "average": "4.0",
+      "reviews": [
+        4
+      ]
     },
     {
       "id": 15,
@@ -124,22 +133,29 @@
       "id": 16,
       "url": "https://static.metacritic.com/images/products/games/6/e5cfe9ceea82fd605822b1eb90ff3e73-98.jpg",
       "name": "Horizon Zero Dawn",
-      "average": 0,
-      "reviews": []
+      "average": "2.0",
+      "reviews": [
+        3,
+        1
+      ]
     },
     {
       "id": 17,
       "url": "https://static.metacritic.com/images/products/games/4/ff728f9a503208cfe52254e6224be46a-98.jpg",
       "name": "Dark Souls III",
-      "average": 0,
-      "reviews": []
+      "average": "3.0",
+      "reviews": [
+        3
+      ]
     },
     {
       "id": 18,
       "url": "https://static.metacritic.com/images/products/games/5/92ba4685e153548a1d1ea590b8432b29-98.jpg",
       "name": "Metal Gear Solid V",
-      "average": 0,
-      "reviews": []
+      "average": "0.5",
+      "reviews": [
+        0.5
+      ]
     }
   ]
 }

@@ -1,32 +1,21 @@
-import api from '../../api/api'
+import getCall from '../../logic/get-call'
+import { LOADING, GET_GAMES, ERROR, CLEAN_ERROR } from './actions-types'
 
 
 export const getGames = () => async dispatch => {
     try {
 
-        dispatch({ type: 'LOADING', payload: true })
+        dispatch({ type: LOADING, payload: true })
+        const games = await getCall()
+        dispatch({ type: LOADING, payload: false })
+        return dispatch({ type: GET_GAMES, payload: games })
 
-        const response = await api.get()
-      
-        const { status } = response
-        
-        if (status === 200) {
-           
-            dispatch({ type: 'LOADING', payload: false })
-            return dispatch({ type: 'GETGAMES', payload: response.data })
-
-        } else {
-
-            throw new Error("Unable to fetch games")
-
-        }
 
     } catch (error) {
 
-        dispatch({ type: 'ERROR', payload: error.message })
-
+        dispatch({ type: ERROR, payload: error.message })
         setTimeout(() => {
-            return dispatch({ type: 'CLEANERROR' })
+            return dispatch({ type: CLEAN_ERROR })
         }, 8000)
 
     }

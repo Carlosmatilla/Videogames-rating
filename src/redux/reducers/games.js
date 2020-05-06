@@ -1,15 +1,17 @@
+import { GET_GAMES, RATE_GAMES} from '../actions/actions-types'
+
 const defaultState = []
 
 export default function games(state = defaultState, { type, payload }) {
 
     switch (type) {
 
-        case 'GETGAMES': {
+        case GET_GAMES: {
             return state.concat(payload)
         
         }
 
-        case 'RATEGAMES': {
+        case RATE_GAMES: {
             return state.filter(g => g.id !== payload.id).concat(payload)
             
         }

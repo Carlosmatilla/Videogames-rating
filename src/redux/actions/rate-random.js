@@ -1,6 +1,8 @@
 import store from '../store'
-import delay from '../../utils/delay'
-const { floor, random } = Math
+import randomGenerator from '../../utils/random-generator'
+import rateCall from '../../logic/rate-call'
+import { RANDOM, RATE_GAMES, ERROR, CLEAN_ERROR } from './actions-types'
+
 
 
 export const callRandom = () => dispatch => {
@@ -9,11 +11,11 @@ export const callRandom = () => dispatch => {
 
     if (random === true) {
 
-        return dispatch({ type: 'RANDOM', payload: false })
+        return dispatch({ type: RANDOM, payload: false })
 
     } else {
 
-        dispatch({ type: 'RANDOM', payload: true })
+        dispatch({ type: RANDOM, payload: true })
         return dispatch(rateRandom())
 
     }
@@ -23,33 +25,24 @@ export const rateRandom = () => async dispatch => {
 
     try {
 
-        const gameRandom = floor(random() * 18)
-        const averageRandom = floor(random() * 5) + 1
-        const timeRandom = floor(random() * 4000)
+        const { gameRandom, averageRandom } = await randomGenerator()
 
-        await delay(timeRandom)
+        const { games, random } = store.getState()
+        const game = { ...games[gameRandom] }
 
-        const currentState = store.getState()
+        const gameRated = await rateCall(game, averageRandom)
         
-        const newGame = { ...currentState.games[gameRandom] }
-        console.log(newGame)
-        newGame.reviews.push(averageRandom)
-        newGame.average = ((newGame.reviews.reduce((a, b) => a += b)) / newGame.reviews.length).toFixed(1)
-
-        if (currentState.random === true) {
-
-            dispatch({ type: 'RATEGAMES', payload: newGame })
+        if (random === true) {
+            dispatch({ type: RATE_GAMES, payload: gameRated })
             return dispatch(rateRandom())
-
         }
 
     } catch (error) {
 
-        dispatch({ type: 'ERROR', payload: error })
+        dispatch({ type: ERROR, payload: error })
         setTimeout(() => {
-            return dispatch({ type: 'CLEANERROR' })
+            return dispatch({ type: CLEAN_ERROR })
         }, 8000);
-
     }
 }
 
