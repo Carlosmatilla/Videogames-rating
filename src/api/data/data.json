@@ -4,47 +4,58 @@
       "id": 1,
       "url": "https://static.metacritic.com/images/products/games/2/fc2b1036e9ce9e224d11e32d5571a5bc-98.jpg",
       "name": "Persona 5 Royal",
-      "average": 0,
-      "reviews": []
+      "average": "2.5",
+      "reviews": [
+        2.5
+      ]
     },
     {
       "id": 2,
       "url": "https://static.metacritic.com/images/products/games/5/40531eb3a9013197e4bf63dbfb866719-98.jpg",
       "name": "Final Fantasy VII Remake",
-      "average": 0,
-      "reviews": []
+      "average": "3.5",
+      "reviews": [
+        5,
+        2
+      ]
     },
     {
       "id": 3,
       "url": "https://static.metacritic.com/images/products/games/6/1aabc829ea9aa79bd1a90fffa77eb0bf-98.jpg",
       "name": "DOOM Eternal",
-      "average": 0,
-      "reviews": []
+      "average": "4.1",
+      "reviews": [
+        4.5,
+        4.5,
+        3,
+        4.5
+      ]
     },
     {
       "id": 4,
       "url": "https://static.metacritic.com/images/products/games/2/29462c61409dc4166ac8f33074ae322c-98.jpg",
       "name": "Nioh 2",
-      "average": 0,
-      "reviews": []
+      "average": "5.0",
+      "reviews": [
+        5,
+        5
+      ]
     },
     {
       "id": 5,
       "url": "https://static.metacritic.com/images/products/games/2/72764928de50fee04f05ac490153dc0e-98.jpg",
       "name": "Resident Evil 3",
-      "average": "5.0",
+      "average": "4.5",
       "reviews": [
-        5
+        4.5
       ]
     },
     {
       "id": 6,
       "url": "https://static.metacritic.com/images/products/games/8/f5b1cbf43a118c429f67022f9e93b41d-98.jpg",
       "name": "Red Dead Redemption 2",
-      "average": "4.5",
-      "reviews": [
-        4.5
-      ]
+      "average": 0,
+      "reviews": []
     },
     {
       "id": 7,

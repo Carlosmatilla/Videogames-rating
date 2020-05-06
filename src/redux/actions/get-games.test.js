@@ -20,7 +20,6 @@ describe("getGames Action", () => {
         Promise.resolve({
           data: { id: 1, name: "God of War" },
           status: 200
-
         })
       )
 

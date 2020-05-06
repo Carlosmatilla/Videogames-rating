@@ -1,17 +1,10 @@
 import api from '../../api/api'
 
-// function delay() {
-//     return new Promise(resolve => {
-//         setTimeout(() => {
-//             resolve()
-//         }, 2000)
-//     })
-// }
 
 export const getGames = () => async dispatch => {
     try {
 
-        dispatch({ type: 'LOADING' })
+        dispatch({ type: 'LOADING', payload: true })
 
         const response = await api.get()
       
@@ -19,6 +12,7 @@ export const getGames = () => async dispatch => {
         
         if (status === 200) {
            
+            dispatch({ type: 'LOADING', payload: false })
             return dispatch({ type: 'GETGAMES', payload: response.data })
 
         } else {

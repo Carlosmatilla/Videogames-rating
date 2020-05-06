@@ -16,7 +16,7 @@ describe("rateGames Action", () => {
 
   describe("rateGames action creator", () => {
     it("dispatches RATEGAMES action and returns data on success", async () => {
-        const game ={ id: 3, name: "God of War", reviews: [], average: 0}
+        const game = { id: 3, name: "God of War", reviews: [], average: 0}
       const average = 5
       mockAxios.put.mockImplementationOnce(() =>
         Promise.resolve({

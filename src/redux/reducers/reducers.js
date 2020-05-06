@@ -1,8 +1,8 @@
 const defaultState = {
     games:[],
-    error: false,
-    errorMessage: null,
-    isLoading: false
+    error: null,
+    isLoading: false,
+    random: false
 }
 
 function reducers(state = defaultState, { type, payload }) {
@@ -28,25 +28,33 @@ function reducers(state = defaultState, { type, payload }) {
             
             return {
                 ...state,
-                error: true,
-                errorMessage: payload
+                error: payload,
+                
             }
         }
 
         case 'CLEANERROR': {
             return {
                 ...state,
-                error: false,
-                errorMessage: null
+                error: null
             }
         }
 
         case 'LOADING': {
             return {
                 ...state,
-                isLoading: true
+                isLoading: payload
             }
         }
+
+        case 'RANDOM': {
+            return {
+                ...state,
+                random: payload
+            }
+        }
+
+            
 
         default:
             return state;

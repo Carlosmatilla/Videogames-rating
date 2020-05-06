@@ -2,6 +2,7 @@ import React from 'react';
 import { Rate } from 'antd';
 import { StarFilled } from '@ant-design/icons';
 import './Game.sass'
+const { round } = Math
 
 
 function Game({ game, handleRating, i }) {
@@ -19,7 +20,7 @@ function Game({ game, handleRating, i }) {
             </div>
 
             <div className="game__stars">
-                <Rate value={Math.round(game.average * 2)/2} allowClear={false} allowHalf onChange={(value) => handleRating(game, value)} />
+                <Rate value={round(game.average * 2)/2} allowClear={false} allowHalf onChange={(value) => handleRating(game, value)} />
                 <p>( {game.reviews.length} )</p>
             </div>
 
