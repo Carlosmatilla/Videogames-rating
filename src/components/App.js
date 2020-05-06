@@ -1,13 +1,13 @@
 import React, { useEffect } from 'react'
 import Game from './Game'
 import Header from './Header'
-import { rateGames, getGames, callRandom } from '../redux/actions/index'
+import { rateGames, getGames, callRandom, resetDb } from '../redux/actions/index'
 import { connect } from 'react-redux'
 import { motion, AnimatePresence } from "framer-motion"
 import './App.sass'
 
 
-function App({ games, rateGames, getGames, callRandom, random }) {
+function App({ games, rateGames, getGames, callRandom, random, resetDb }) {
 
   useEffect(() => {
     (async () => await getGames())()
@@ -21,10 +21,14 @@ function App({ games, rateGames, getGames, callRandom, random }) {
     callRandom()
   }
 
+  function handleReset(){
+    resetDb(games)
+  }
+
   return <>
     <div className="app">
 
-      <Header handleRandom={handleRandom} random={random} />
+      <Header handleRandom={handleRandom} handleReset={handleReset} random={random} />
 
       <div className="games">
         <AnimatePresence>
@@ -54,7 +58,8 @@ const mapStateToProps = state => {
 const mapDispatchToProps = {
   rateGames,
   getGames,
-  callRandom
+  callRandom,
+  resetDb
 }
 
 export default connect(mapStateToProps, mapDispatchToProps)(App)

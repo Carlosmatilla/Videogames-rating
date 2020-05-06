@@ -1,4 +1,4 @@
-import { GET_GAMES, RATE_GAMES} from '../actions/actions-types'
+import { GET_GAMES, RATE_GAMES, RESET } from '../actions/actions-types'
 
 const defaultState = []
 
@@ -12,7 +12,13 @@ export default function games(state = defaultState, { type, payload }) {
         }
 
         case RATE_GAMES: {
+          
             return state.filter(g => g.id !== payload.id).concat(payload)
+            
+        }
+        case RESET: {
+  
+            return state.filter((g, i) => g === g[i]).concat(payload)
             
         }
 

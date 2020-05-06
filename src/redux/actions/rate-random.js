@@ -3,8 +3,6 @@ import randomGenerator from '../../utils/random-generator'
 import rateCall from '../../logic/rate-call'
 import { RANDOM, RATE_GAMES, ERROR, CLEAN_ERROR } from './actions-types'
 
-
-
 export const callRandom = () => dispatch => {
 
     const { random } = store.getState()

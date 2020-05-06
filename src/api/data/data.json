@@ -4,27 +4,15 @@
       "id": 1,
       "url": "https://static.metacritic.com/images/products/games/2/fc2b1036e9ce9e224d11e32d5571a5bc-98.jpg",
       "name": "Persona 5 Royal",
-      "average": 3.9,
-      "reviews": [
-        3.5,
-        4,
-        4,
-        4,
-        4,
-        4,
-        4,
-        4,
-        4
-      ]
+      "average": 0,
+      "reviews": []
     },
     {
       "id": 2,
       "url": "https://static.metacritic.com/images/products/games/5/40531eb3a9013197e4bf63dbfb866719-98.jpg",
       "name": "Final Fantasy VII Remake",
-      "average": 2,
-      "reviews": [
-        2
-      ]
+      "average": 0,
+      "reviews": []
     },
     {
       "id": 3,
@@ -37,11 +25,8 @@
       "id": 4,
       "url": "https://static.metacritic.com/images/products/games/2/29462c61409dc4166ac8f33074ae322c-98.jpg",
       "name": "Nioh 2",
-      "average": 2.8,
-      "reviews": [
-        4.5,
-        1
-      ]
+      "average": 0,
+      "reviews": []
     },
     {
       "id": 5,
@@ -89,20 +74,15 @@
       "id": 11,
       "url": "https://static.metacritic.com/images/products/games/2/bccdebd6ae21b1a35353b6d9f27af1a5-98.jpg",
       "name": "Uncharted 4",
-      "average": 1.5,
-      "reviews": [
-        1,
-        2
-      ]
+      "average": 0,
+      "reviews": []
     },
     {
       "id": 12,
       "url": "https://static.metacritic.com/images/products/games/5/d31120073f909d2c034c09f91e7a5073-98.jpg",
       "name": "Bloodborne",
-      "average": 4,
-      "reviews": [
-        4
-      ]
+      "average": 0,
+      "reviews": []
     },
     {
       "id": 13,
@@ -122,10 +102,8 @@
       "id": 15,
       "url": "https://static.metacritic.com/images/products/games/6/a03dc14041cf90fe791985271f5e059b-98.jpg",
       "name": "Sekiro: Shadows Die Twice",
-      "average": 3,
-      "reviews": [
-        3
-      ]
+      "average": 0,
+      "reviews": []
     },
     {
       "id": 16,
@@ -145,10 +123,8 @@
       "id": 18,
       "url": "https://static.metacritic.com/images/products/games/5/92ba4685e153548a1d1ea590b8432b29-98.jpg",
       "name": "Metal Gear Solid V",
-      "average": 5,
-      "reviews": [
-        5
-      ]
+      "average": 0,
+      "reviews": []
     }
   ]
 }

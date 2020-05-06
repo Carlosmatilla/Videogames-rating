@@ -4,7 +4,7 @@ export default function () {
 
     const gameRandom = floor(random() * 18)
     const averageRandom = floor(random() * 5) + 1
-    const timeRandom = floor(random() * 4000)
+    const timeRandom = floor(random() * 2000)
 
     return new Promise(resolve => {
         setTimeout(() => {
