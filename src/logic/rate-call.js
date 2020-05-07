@@ -3,6 +3,7 @@ import validate from '../utils/validate'
 
 export default async function(game, average){
 
+
     validate(game, "object")
     validate(game.id, "number")
     validate(game.name, "string")
@@ -16,9 +17,9 @@ export default async function(game, average){
     newGame.reviews.push(average)
 
     newGame.average = Number(((newGame.reviews.reduce((a, b) => a += b)) / newGame.reviews.length).toFixed(1))
-
+    
     const response = await api.update(newGame, newGame.id)
-
+   
     const { status } = response
 
     if (status === 200) {

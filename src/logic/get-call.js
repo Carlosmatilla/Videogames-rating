@@ -10,8 +10,12 @@ export default async function () {
 
         return response.data
 
-    } else {
+    } else if(status === 418) {
 
+        throw new Error("I'm a teapot")
+
+    }else {
+        
         throw new Error("Unable to fetch games")
 
     }

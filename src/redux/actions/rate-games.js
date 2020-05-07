@@ -11,7 +11,7 @@ export const rateGames = (game, average) => async dispatch => {
 
     } catch (error) {
 
-        dispatch({ type: ERROR, payload: error })
+        dispatch({ type: ERROR, payload: error.message })
         setTimeout(() => {
             return dispatch({ type: CLEAN_ERROR })
         }, 8000);
