@@ -22,7 +22,7 @@ describe("getCall Logic", () => {
     it("should fail with 418 error", async () => {
         mockAxios.get.mockImplementationOnce(() =>
             Promise.resolve({
-                data: ['games'],
+                data: [],
                 status: 418
             })
         )
@@ -38,7 +38,7 @@ describe("getCall Logic", () => {
     it("should fail with when status !== 200", async () => {
         mockAxios.get.mockImplementationOnce(() =>
             Promise.resolve({
-                data: ['games'],
+                data: [],
                 status: 384
             })
         )

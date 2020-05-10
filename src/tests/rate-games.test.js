@@ -45,7 +45,7 @@ describe("rateGames Action", () => {
     it("tests RATEGAMES action and that returns an error", async () => {
       mockAxios.put.mockImplementationOnce(() =>
         Promise.resolve({
-          data: game,
+          data: [],
           status: 300
         })
       )

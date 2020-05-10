@@ -65,20 +65,7 @@ describe("getGames Action", () => {
     it("tests GETGAMES action and that returns an error", async () => {
       mockAxios.get.mockImplementationOnce(() =>
         Promise.resolve({
-          data: [{
-            id,
-            url,
-            name,
-            average,
-            reviews
-          },
-          {
-            id,
-            url,
-            name,
-            average,
-            reviews
-          }],
+          data: [],
           status: 418
         })
       )
@@ -97,20 +84,7 @@ describe("getGames Action", () => {
   it("tests GETGAMES action and that returns an error", async () => {
     mockAxios.get.mockImplementationOnce(() =>
       Promise.resolve({
-        data: [{
-          id,
-          url,
-          name,
-          average,
-          reviews
-        },
-        {
-          id,
-          url,
-          name,
-          average,
-          reviews
-        }],
+        data: [],
         status: 400
       })
     )
