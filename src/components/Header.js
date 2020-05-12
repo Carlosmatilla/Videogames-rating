@@ -14,7 +14,6 @@ const Header = ({ handleRandom, handleReset, random, error }) => {
         <header className="header">
 
             <div className="header__logo">
-                <img src="https://hexad.de/wp-content/themes/hexad/img/hexad-small-logo.png" alt="logo" />
                 <h2>Top VideoGames</h2>
             </div>
 
